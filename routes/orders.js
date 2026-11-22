@@ -98,6 +98,7 @@ router.post('/orders', function (req, res) {
     paymentMode: paymentMode,
     status: body.status || 'completed',
     items: items,
+    taxLines: totals.lines,
     coupon: rawCoupon,
     subtotal: totals.subtotal,
     discount: totals.discount,
